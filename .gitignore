@@ -5,3 +5,4 @@ mlruns
 share
 __pycache__
 azure_ml_jobs.py
+submit_to_azureml.py
