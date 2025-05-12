@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestClassifier
 from pydantic import BaseModel
 import numpy as np
 
-model: RandomForestClassifier = joblib.load('battery_performance_model.joblib')
+model: RandomForestClassifier = joblib.load('./model/battery_performance_model.joblib')
 
 app = FastAPI()
 class Features(BaseModel):

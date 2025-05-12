@@ -20,7 +20,7 @@ from mlflow.models.signature import infer_signature
 
 
 # Load csv dataset to data frame
-batteryGradingDataSet = './battery_classification_dataset_100.csv'
+batteryGradingDataSet = './dataset/battery_classification_dataset_100.csv'
 batterGradingDataFrame  : DataFrame = pd.read_csv(batteryGradingDataSet)  
 
 # Cleansing & Transform
@@ -76,7 +76,7 @@ with mlflow.start_run() as run:
     mlflow.log_metric("accuracy", accuracy)
 
     #Export the model for further use without training
-    joblib.dump(model, 'battery_performance_model.joblib')
+    joblib.dump(model, './model/battery_performance_model.joblib')
     signature = infer_signature(x)
 
     # Log the model along with the signature and input example

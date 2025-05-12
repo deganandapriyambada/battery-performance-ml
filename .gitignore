@@ -4,3 +4,4 @@ lib
 mlruns
 share
 __pycache__
+azure_ml_jobs.py
